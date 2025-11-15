@@ -1,0 +1,87 @@
+html { font-size: 10px; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #efefef;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 60rem;
+  background: #c83226;
+  border: 0.3rem solid #000;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.card header,
+.card footer {
+  padding: 1em;
+  height: 3em;
+  box-sizing: content-box;
+  text-align: center;
+}
+
+.card header {
+  background: linear-gradient(#b71f18, #df4a3a);
+  color: #000;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.card footer {
+  background: linear-gradient(#e85a4f, #b71f18);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.card header h2 {
+  margin: 0;
+  font-size: 2.2em;
+  line-height: 3em;
+  font-weight: 800;
+}
+
+.card footer p {
+  margin: 0;
+  font-size: 2em;
+  line-height: 3em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+.card article{
+  display: flex;
+  align-items: stretch;
+  height: 14em;              
+  background: rgba(0,0,0,.25);
+  overflow: hidden;              
+}
+
+.card article p{
+  order: 1;                      
+  flex: 1;                      
+  margin: 0;
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #f7f7f7;
+}
+
+.card article img{
+  order: 2;                      
+  width: 12em;                   
+  height: 100%;
+  object-fit: cover;
+  border-left: .2rem solid rgba(0,0,0,.3);
+}
+
+.card article strong{
+  font-weight: 700;
+  color: #fff;
+}

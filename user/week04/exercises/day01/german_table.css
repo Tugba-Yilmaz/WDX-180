@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 40px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #8cb3c8;
+  color: white;
+}
+
+tbody th {
+  background-color: #8cb3c8;
+  color: white;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
