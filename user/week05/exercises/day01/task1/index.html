@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message input</title>
+
+    <style>
+      :root {
+        --color-bg-page: #282828;
+        --color-text-main: #d0d0d0;
+        --color-text-placeholder: #767676;
+        --color-border-default: #4c4c4c;
+        --color-border-hover: #8f8f8f;
+        --color-border-focus: #7c9dbd;
+        --color-border-error: #862e2a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: var(--color-bg-page);
+        color: var(--color-text-main); /* BUNU EKLE */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      main {
+        width: 100%;
+        max-width: 500px;
+        padding: 1.5rem;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        color: var(--color-text-main);
+      }
+
+      label {
+        font-size: 0.95rem;
+        cursor: pointer;
+      }
+
+      input[type="text"] {
+        padding: 0.6rem 0.8rem;
+        border-radius: 4px;
+        border: 1px solid var(--color-border-default);
+        background-color: transparent;
+        color: var(--color-text-main);
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+      }
+
+      input[type="text"]::placeholder {
+        color: var(--color-text-placeholder);
+      }
+
+      input[type="text"]:hover {
+        border-color: var(--color-border-hover);
+      }
+
+      input[type="text"]:focus {
+        border-color: var(--color-border-focus);
+      }
+
+      label:hover + input[type="text"] {
+        border-color: var(--color-border-focus);
+      }
+
+      input[type="text"]:invalid {
+        border-color: var(--color-border-error);
+      }
+
+      .char-count {
+        margin: 0;
+        font-size: 0.8rem;
+        color: var(--color-text-main);
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="#">
+        <div class="field">
+          <label for="message">Enter your message:</label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Placeholder text here"
+            required
+            pattern="[A-Za-z0-9!@_\-\$\(\)\s]{0,30}"
+            title="Only A-Z, a-z, 0-9, spaces and ! @ _ - $ ( ) are allowed. Max 30 characters."
+            aria-describedby="message-help"
+          />
+          <p id="message-help" class="char-count">0/30 characters</p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
