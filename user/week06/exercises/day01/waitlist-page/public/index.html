@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waitlist Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+              playfair: ["Playfair Display", "serif"],
+            },
+            rotate: {
+              15: "15deg",
+              30: "30deg",
+              45: "45deg",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-amber-50 font-lato">
+    <div
+      class="min-h-screen max-w-6xl mx-auto px-6 py-6 lg:py-10 lg:px-10 flex flex-col justify-between"
+    >
+      <header class="flex items-center justify-between w-full">
+        <div class="flex items-center gap-3">
+          <img src="./Assets/Logo.svg" alt="Hosterr logo" class="h-7" />
+          <button
+            class="bg-gradient-to-r from-orange-400 to-red-400 text-xs text-white px-3 py-1.5 rounded-2xl shadow-sm font-bold tracking-wide"
+          >
+            Hosterr is hiring!
+          </button>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-10 font-lato text-gray-500">
+          <a href="#" class="hover:text-gray-800 transition">Plans</a>
+          <a href="#" class="hover:text-gray-800 transition">Find Domain</a>
+          <a href="#" class="hover:text-gray-800 transition">Why Hosterr</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-6 font-lato">
+          <a href="#" class="text-gray-700 hover:text-gray-900 font-medium"
+            >Sign In</a
+          >
+          <button
+            class="bg-blue-500 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-blue-600 shadow-md transition"
+          >
+            Join Waitlist
+          </button>
+        </div>
+
+        <button class="lg:hidden text-gray-700">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </header>
+
+      <main
+        class="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:gap-10 mt-10 lg:mt-0"
+      >
+        <div
+          class="space-y-6 max-w-xl mx-auto lg:mx-0 lg:flex-1 mt-10 lg:mt-0 text-center lg:text-left"
+        >
+          <h1
+            class="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] font-playfair text-gray-900"
+          >
+            Host your website in less than 5 minutes.
+          </h1>
+
+          <p
+            class="font-lato text-gray-500 text-lg leading-relaxed max-w-md mx-auto lg:mx-0"
+          >
+            With Hosterr, get your website up and running in no less than 5
+            minutes with the most competitive pricing packages available online.
+          </p>
+
+          <form class="flex flex-col gap-3 sm:flex-row sm:items-center mt-4">
+            <input
+              type="email"
+              placeholder="Enter e-mail address"
+              class="rounded-md px-4 py-3.5 flex-1 placeholder:text-gray-400 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+            />
+            <button
+              class="bg-blue-500 rounded-md px-6 py-3.5 font-medium text-white hover:bg-blue-600 transition shadow-md whitespace-nowrap"
+            >
+              Join Waitlist
+            </button>
+          </form>
+
+          <div
+            class="flex items-center justify-center lg:justify-start gap-2 pt-2"
+          >
+            <div class="bg-green-500 rounded-full p-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3 w-3 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <p class="font-lato text-gray-400 text-sm">
+              No spam, ever. Unsubscribe anytime.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center lg:flex-1 lg:justify-end">
+          <div class="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-120 lg:h-120">
+            <img
+              src="./Assets/Blue Shape.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-contain -rotate-45"
+            />
+
+            <img
+              src="./Assets/Pink Shape.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-contain -rotate-30"
+            />
+
+            <img
+              src="./Assets/Purple Shape.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-contain -rotate-15"
+            />
+
+            <img
+              src="./Assets/Hero Image (Model).png"
+              alt=""
+              class="absolute inset-0 w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between py-6 mt-10"
+      >
+        <ul class="flex gap-6 font-lato text-gray-500 font-medium text-sm">
+          <li><a href="#" class="hover:text-gray-800">Facebook</a></li>
+          <li><a href="#" class="hover:text-gray-800">Instagram</a></li>
+          <li><a href="#" class="hover:text-gray-800">Twitter</a></li>
+        </ul>
+
+        <div class="flex gap-3 items-center">
+          <img
+            src="./Assets/Help Avatar.svg"
+            alt="Specialist"
+            class="h-12 w-12 rounded-full"
+          />
+          <div class="leading-tight text-left">
+            <p class="font-playfair text-sm text-gray-500">
+              Have any questions?
+            </p>
+            <a
+              href="#"
+              class="font-lato font-bold text-gray-900 text-sm hover:underline"
+            >
+              Talk to a specialist!
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
